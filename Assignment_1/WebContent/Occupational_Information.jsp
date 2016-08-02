@@ -10,7 +10,26 @@
 </head>
 <body>
 
-
+<%Cookie[] cks = request.getCookies();
+		if (cks != null) {
+			for (int i = 0; i < cks.length; i++) {
+				String name = cks[i].getName();
+				String value = cks[i].getValue();
+				if (name.equals("user")) {
+					break; // exit the loop and continue the page
+				}
+				if (i == (cks.length - 1)) // if all cookie are not valid redirect to error page
+				{
+					response.sendRedirect("SessionExpired.jsp");
+					return; // to stop further execution
+				}
+				i++;
+			}
+		} else {
+			response.sendRedirect("SessionExpired.jsp");
+			return; // to stop further execution
+		}
+	%>
 
 <jsp:useBean id="emp" class="com.bitwise.profileinformation.Educational_Info" scope="session" ></jsp:useBean>
 <jsp:setProperty  property="*"  name="emp"/>

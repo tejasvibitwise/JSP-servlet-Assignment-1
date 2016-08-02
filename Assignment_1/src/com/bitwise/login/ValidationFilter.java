@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -59,6 +60,9 @@ public class ValidationFilter implements Filter {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 
+		Cookie ck=new Cookie("user",username);  
+		ck.setMaxAge(600);
+		
 		if(username=="" || password=="")
 		{
 			request.getRequestDispatcher("fieldnull.jsp").forward(request, response);
@@ -67,6 +71,9 @@ public class ValidationFilter implements Filter {
 		{
 			if (hm.containsKey(username) && password.equals(hm.get(username)))
 			{
+				
+	            ((HttpServletResponse) response).addCookie(ck); 
+				
 				
 				HttpSession session = req.getSession(true);
 				req.getSession().setAttribute("user", username);
