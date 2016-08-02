@@ -24,11 +24,11 @@
 <form name="occupationalinfo" method="post" action="Resedential_Information.jsp">
 <table>
 
-<tr><td>Company Name: </td><td><input type="text" name="company"/> <br/></td></tr>
-<tr><td>Office Address: </td><td><input type="text" name="address"/> <br/></td></tr>
-<tr><td>Phone Number: </td><td><input type="number" name="contact"/> <br/></td></tr>
-<tr><td>Date of Joining: </td><td><input type="date" name="doj"/> <br/></td></tr>
-<tr><td>Working Hours: </td><td><input type="time" name="wrkhrs"/> <br/></td></tr>
+<tr><td>Company Name: </td><td><input type="text" name="company" required/> <br/></td></tr>
+<tr><td>Office Address: </td><td><input type="text" name="address" required/> <br/></td></tr>
+<tr><td>Phone Number: </td><td><input type="number" name="contact" maxlength="10" required/> <br/></td></tr>
+<tr><td>Date of Joining: </td><td><input type="date" name="doj" required/> <br/></td></tr>
+<tr><td>Working Hours: </td><td><input type="time" name="wrkhrs" required/> <br/></td></tr>
 
 
 </table>

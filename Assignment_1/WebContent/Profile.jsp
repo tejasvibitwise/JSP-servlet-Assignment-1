@@ -54,7 +54,13 @@
 
 </table>
 
-<a href="Login.jsp" >Log Out</a>
+<form method="post" action="LogoutServlet"><br>
+<input type="submit" Value="Log Out"></input>
+
+</form>
+
+
+
 
 
 </body>

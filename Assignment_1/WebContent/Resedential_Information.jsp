@@ -23,19 +23,17 @@
  
 <form name="resdentialinfo" method="post" action="Profile.jsp" >
  <table>
- <tr><td>Address: </td><td><input type="text" name="address"/> <br/></td></tr>
- <tr><td>City:</td><td> <input type="text" name="city"/> <br/></td></tr>
- <tr><td>state: </td><td><input type="text" name="state"/> <br/></td></tr>
- <tr><td>Country: </td><td><input type="text" name="country"/> <br/></td></tr>
- <tr><td>pin code:</td><td> <input type="number" name="pin"/> <br/></td></tr>
+ <tr><td>Address: </td><td><input type="text" name="address" required/> <br/></td></tr>
+ <tr><td>City:</td><td> <input type="text" name="city" required/> <br/></td></tr>
+ <tr><td>state: </td><td><input type="text" name="state" required/> <br/></td></tr>
+ <tr><td>Country: </td><td><input type="text" name="country" required/> <br/></td></tr>
+ <tr><td>pin code:</td><td> <input type="number" name="pin" required/> <br/></td></tr>
  </table>
  
  <input type="submit" value="next">
 
 
 </form>
-
-
 
 </body>
 </html>

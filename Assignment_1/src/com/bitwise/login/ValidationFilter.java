@@ -11,6 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -50,7 +52,9 @@ public class ValidationFilter implements Filter {
 		hm.put("teju", "teja");
 		hm.put("surabhi", "suru");
 
-
+		HttpServletRequest req = (HttpServletRequest) request;
+		HttpServletResponse res = (HttpServletResponse) response;
+		
 
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
@@ -63,7 +67,12 @@ public class ValidationFilter implements Filter {
 		{
 			if (hm.containsKey(username) && password.equals(hm.get(username)))
 			{
-							
+				
+				HttpSession session = req.getSession(true);
+				req.getSession().setAttribute("user", username);
+				
+								
+				// request.getSession().setAttribute("user", user);
 				request.getRequestDispatcher("Educational_Information.jsp").forward(request,response);
 				
 	

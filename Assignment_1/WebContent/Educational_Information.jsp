@@ -19,13 +19,13 @@
 <font Color="Blue">Please Enter The Following Details - Educational Information</font>
  <form name="educationalinfo" method="post" action="Occupational_Information.jsp">
  <table>
- <tr><td>Name: </td><td><input type="text" name="name"/></td> <br/></tr>
- <tr><td>Contact : </td><td><input type="number" name="contact" maxlength="10"/> <br/></td></tr>
- <tr><td>Date Of Birth :</td><td> <input type="date" name="dob"/> <br/></td></tr>
- <tr><td>Email Id :</td><td><input type="email" name="email_id"/></td> <br/></tr>
- <tr><td>SSC Marks :</td><td> <input type="number" name="ssc"/> <br/></td></tr>
- <tr><td>HSC Marks :</td><td><input type="number" name="hsc"/> <br/></tr></tr>
- <tr><td>Degree Marks :</td><td><input type="number" name="degree"/> <br/></td></tr>
+ <tr><td>Name: </td><td><input type="text" name="name" required/></td> <br/></tr>
+ <tr><td>Contact : </td><td><input type="number" name="contact" maxlength="10" required/> <br/></td></tr>
+ <tr><td>Date Of Birth :</td><td> <input type="date" name="dob" required/> <br/></td></tr>
+ <tr><td>Email Id :</td><td><input type="email" name="email_id" required /></td> <br/></tr>
+ <tr><td>SSC Marks :</td><td> <input type="number" name="ssc" required/> <br/></td></tr>
+ <tr><td>HSC Marks :</td><td><input type="number" name="hsc" required/> <br/></tr></tr>
+ <tr><td>Degree Marks :</td><td><input type="number" name="degree" required/> <br/></td></tr>
  </table>
  <input type="submit" value="next">
  </form>
